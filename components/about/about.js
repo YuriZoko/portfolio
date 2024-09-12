@@ -10,57 +10,55 @@ const About = (props) => {
                         <div className="wpo-about-exprience-wrap">
                             <div className="wpo-about-exprience">
                                 <h2>08</h2>
-                                <span>Years of Experience</span>
+                                <span>Années d'expérience</span>
                             </div>
                             <div className="client">
                                 <h3><span data-count="100">100</span>%</h3>
-                                <p>Clients Satisfections</p>
+                                <p>de satisfaction clients</p>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-6 offset-lg-1 col-md-12 col-sm-12">
                         <div className="wpo-about-content">
                             <div className="wpo-about-title">
-                                <h2>My Advantage</h2>
-                                <p>Must explain to you how all this mistaken idea of denouncing
-                                    pleasure and praising pain was born and I will give you a complete account
-                                    the system and expound the actual and praising pain was born.</p>
+                                <h2>A propos de moi</h2>
+                                <p>Je maîtrise diverses technologies en développement web et en création de jeux vidéo. De React et Node.js au SQF et Unreal Engine, chaque compétence est évaluée pour vous offrir une vision claire de mon savoir-faire. Découvrez ci-dessous mes compétences techniques, représentées en pourcentage.</p>
                             </div>
                             <div className="wpo-about-funfact">
                                 <div className="grid">
                                     <div className="grid-inner">
                                         <h3><span data-count="98">98</span>%</h3>
-                                        <p>Figma</p>
+                                        <p>SQF</p>
                                     </div>
                                 </div>
                                 <div className="grid">
                                     <div className="grid-inner">
                                         <h3><span data-count="92">92</span>%</h3>
-                                        <p>Sketch</p>
+                                        <p>Blueprint</p>
                                     </div>
                                 </div>
                                 <div className="grid">
                                     <div className="grid-inner">
                                         <h3><span data-count="88">88</span>%</h3>
-                                        <p>Photoshop</p>
+                                        <p>ReactJS</p>
                                     </div>
                                 </div>
                                 <div className="grid">
                                     <div className="grid-inner">
                                         <h3><span data-count="72">72</span>%</h3>
-                                        <p>Illustrator</p>
+                                        <p>C#</p>
                                     </div>
                                 </div>
                                 <div className="grid">
                                     <div className="grid-inner">
                                         <h3><span data-count="43">43</span>%</h3>
-                                        <p>WordPress</p>
+                                        <p>C++</p>
                                     </div>
                                 </div>
                                 <div className="grid">
                                     <div className="grid-inner">
                                         <h3><span data-count="37">37</span>%</h3>
-                                        <p>ReactJS</p>
+                                        <p>LUA</p>
                                     </div>
                                 </div>
                             </div>
