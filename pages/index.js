@@ -1,6 +1,5 @@
 import React, {Fragment} from 'react';
 import About from '../components/about/about';
-import BlogSection from '../components/BlogSection/BlogSection';
 import CommonHead from '../components/commonHead';
 import ContactArea from '../components/ContactArea';
 import ExprienceSec from '../components/Exprience/Exprience';
@@ -26,7 +25,6 @@ export default function Home() {
                 <ProjectSection/>
                 <Testimonial/>
                 <ContactArea/>
-                <BlogSection/>
                 <Footer/>
                 <Scrollbar/>
             </div>

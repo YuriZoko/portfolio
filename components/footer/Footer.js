@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link} from 'react-scroll'
-import CtaSection from '../ctaSection/ctaSection'
 
 
 const SubmitHandler = (e) => {
@@ -10,7 +9,6 @@ const SubmitHandler = (e) => {
 const Footer = (props) => {
     return (
         <footer className="wpo-site-footer">
-            <CtaSection/>
             <div className="upper-footer">
                 <div className="container">
                     <div className="row">
