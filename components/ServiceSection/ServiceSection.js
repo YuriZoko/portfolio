@@ -33,7 +33,7 @@ const ServiceSection = (props) => {
     return (
         <div className={`wpo-service-area section-padding ${props.sClass}`} id='service'>
             <div className="container">
-                <SectionTitle Title={'Popular Services'} />
+                <SectionTitle Title={'Services Populaires'} />
                 <div className="wpo-service-wrap">
                     <Nav tabs>
                         <NavItem>
@@ -41,7 +41,7 @@ const ServiceSection = (props) => {
                                 className={`${classnames({ active: activeTab === '1' })}`}
                                 onClick={() => { toggle('1'); }}
                             >
-                                Design
+                                Web
                             </NavLink>
                         </NavItem>
                         <NavItem>
@@ -49,7 +49,7 @@ const ServiceSection = (props) => {
                                 className={`${classnames({ active: activeTab === '2' })}`}
                                 onClick={() => { toggle('2'); }}
                             >
-                                Development
+                                Jeux Vidéo
                             </NavLink>
                         </NavItem>
                         <NavItem>
@@ -57,7 +57,7 @@ const ServiceSection = (props) => {
                                 className={`${classnames({ active: activeTab === '3' })}`}
                                 onClick={() => { toggle('3'); }}
                             >
-                                Marketing
+                                Mobile
                             </NavLink>
                         </NavItem>
                     </Nav>
@@ -75,7 +75,7 @@ const ServiceSection = (props) => {
                                             <Button
                                                 className="btn"
                                                 onClick={() => handleClickOpen(service)}>
-                                                Learn More
+                                                Afficher plus d'informations
                                             </Button>
                                         </div>
                                     </div>
@@ -95,7 +95,7 @@ const ServiceSection = (props) => {
                                             <Button
                                                 className="btn"
                                                 onClick={() => handleClickOpen(service)}>
-                                                Learn More
+                                                Afficher plus d'informations
                                             </Button>
                                         </div>
                                     </div>
@@ -115,7 +115,7 @@ const ServiceSection = (props) => {
                                             <Button
                                                 className="btn"
                                                 onClick={() => handleClickOpen(service)}>
-                                                Learn More
+                                                Afficher plus d'informations
                                             </Button>
                                         </div>
                                     </div>
