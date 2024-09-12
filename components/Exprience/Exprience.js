@@ -9,6 +9,7 @@ const Expriences = [
         position: 'Developpeur LUA',
         companyName: 'Florian GIRARD, France',
         workFrom: '(Remote)',
+        link: 'https://www.gmodstore.com/',
     },
     {
         date: '2019 - 2022',
@@ -16,6 +17,7 @@ const Expriences = [
         position: 'Developpeur SQF',
         companyName: 'The-Programmer, France',
         workFrom: '(Remote)',
+        link: 'https://www.the-programmer.com/',
     },
     {
         date: '2022 - Maintenant',
@@ -23,6 +25,7 @@ const Expriences = [
         position: 'Leader',
         companyName: 'The-Programmer, France',
         workFrom: '(Remote)',
+        link: 'https://www.the-programmer.com/',
     },
     {
         date: '2022 - Maintenant',
@@ -30,6 +33,7 @@ const Expriences = [
         position: 'Freelance',
         companyName: 'Florian GIRARD, France',
         workFrom: '(Remote)',
+        link: 'https://florian-girard.dev/',
     },
 
 ]
@@ -51,7 +55,7 @@ const ExprienceSec = (props) => {
                                 <li className="logo"><img src={exprience.logo} alt="" /></li>
                                 <li className="position">{exprience.position} <span>{exprience.companyName} <span>{exprience.workFrom}</span></span></li>
                                 <li className="link">
-                                    <Link href="/">
+                                    <Link href={exprience.link}>
                                         Visiter le site
                                     </Link>
                                 </li>
