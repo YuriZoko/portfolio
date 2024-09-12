@@ -42,7 +42,7 @@ const Hero = () => {
                             </div>
                             <div className="p-text">
                                 <h3><span data-count="1500">50</span>+</h3>
-                                <p>Complete Project</p>
+                                <p>Projets terminés</p>
                             </div>
                         </div>
                     </div>
