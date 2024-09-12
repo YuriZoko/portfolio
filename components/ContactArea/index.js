@@ -9,49 +9,49 @@ const ContactArea = (props) => {
             <div className="wpo-wpo-contact-form-map">
                 <div className="container">
                     <div className="row">
-                        <SectionTitle Title={'Let’s Talk'} />
+                        <SectionTitle Title={'Parlons-en'} />
                     </div>
                     <div className="row">
                         <div className="co-lg-10 offset-lg-1  col-12">
                             <div className="row">
                                 <div className="col col-lg-6 col-md-12 col-12">
                                     <div className="wpo-contact-form">
-                                        <h2>Get In Touch</h2>
+                                        <h2>Prendre contact</h2>
                                         <ContactForm />
                                     </div>
                                 </div>
                                 <div className="col col-lg-6 col-md-12 col-12">
                                     <div className="wpo-contact-info">
                                         <div className="info-item">
-                                            <h2>25 North Street,Dubai</h2>
+                                            <h2>76890 TÔTES, France</h2>
                                             <div className="info-wrap">
                                                 <div className="info-icon">
                                                     <i className="fi flaticon-location"></i>
                                                 </div>
                                                 <div className="info-text">
-                                                    <span>Office Address</span>
+                                                    <span>Siege Social</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="info-item">
-                                            <h2>info@elito.com</h2>
+                                            <h2>gestion@florian-girard.dev</h2>
                                             <div className="info-wrap">
                                                 <div className="info-icon">
                                                     <i className="fi flaticon-mail"></i>
                                                 </div>
                                                 <div className="info-text">
-                                                    <span>Official Mail</span>
+                                                    <span>E-Mail</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="info-item">
-                                            <h2>+91 256-987-239</h2>
+                                            <h2>+33 6 14 31 79 83</h2>
                                             <div className="info-wrap">
                                                 <div className="info-icon">
                                                     <i className="fi flaticon-phone-call"></i>
                                                 </div>
                                                 <div className="info-text">
-                                                    <span>Official Phone</span>
+                                                    <span>Téléphone</span>
                                                 </div>
                                             </div>
                                         </div>
