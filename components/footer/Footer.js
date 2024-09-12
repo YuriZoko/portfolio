@@ -52,8 +52,8 @@ const Footer = (props) => {
                                     <h3>All Services</h3>
                                 </div>
                                 <ul>
-                                    <li><Link to="service" spy={true} smooth={true}  duration={500}>Web Design</Link></li>
-                                    <li><Link to="service" spy={true} smooth={true}  duration={500}>Web Development</Link></li>
+                                    <li><Link to="service" spy={true} smooth={true}  duration={500}>Développement Web</Link></li>
+                                    <li><Link to="service" spy={true} smooth={true}  duration={500}>Jeux Vidéo</Link></li>
                                     <li><Link to="service" spy={true} smooth={true}  duration={500}>Brand Identity</Link></li>
                                     <li><Link to="service" spy={true} smooth={true}  duration={500}>Digital Marketing</Link></li>
                                 </ul>

@@ -51,7 +51,7 @@ const Contact = () => {
                             name="name"
                             onBlur={(e) => changeHandler(e)}
                             onChange={(e) => changeHandler(e)}
-                            placeholder="Your Name" />
+                            placeholder="Votre nom" />
                     </div>
                     {validator.message('name', forms.name, 'required|alpha_space')}
                 </div>
@@ -64,7 +64,7 @@ const Contact = () => {
                             name="email"
                             onBlur={(e) => changeHandler(e)}
                             onChange={(e) => changeHandler(e)}
-                            placeholder="Your Email" />
+                            placeholder="Votre E-mail" />
                         {validator.message('email', forms.email, 'required|email')}
                     </div>
                 </div>
@@ -76,9 +76,9 @@ const Contact = () => {
                             value={forms.subject}
                             type="text"
                             name="subject">
-                            <option>Choose a Service</option>
-                            <option>Web Design</option>
-                            <option>Web Development</option>
+                            <option>Choisir un service</option>
+                            <option>Développement Web</option>
+                            <option>Jeux Vidéo</option>
                             <option>Marketing</option>
                         </select>
                         {validator.message('subject', forms.subject, 'required|alpha_space')}

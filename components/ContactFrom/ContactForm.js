@@ -50,7 +50,7 @@ const ContactForm = () => {
                             name="name"
                             onBlur={(e) => changeHandler(e)}
                             onChange={(e) => changeHandler(e)}
-                            placeholder="Your Name" />
+                            placeholder="Votre nom" />
                         {validator.message('name', forms.name, 'required|alpha_space')}
                     </div>
                 </div>
@@ -62,7 +62,7 @@ const ContactForm = () => {
                             name="email"
                             onBlur={(e) => changeHandler(e)}
                             onChange={(e) => changeHandler(e)}
-                            placeholder="Your Email" />
+                            placeholder="Votre E-mail" />
                         {validator.message('email', forms.email, 'required|email')}
                     </div>
                 </div>
@@ -74,7 +74,7 @@ const ContactForm = () => {
                             name="phone"
                             onBlur={(e) => changeHandler(e)}
                             onChange={(e) => changeHandler(e)}
-                            placeholder="Your phone" />
+                            placeholder="Numéro de téléphone" />
                         {validator.message('phone', forms.phone, 'required|phone')}
                     </div>
                 </div>
@@ -86,10 +86,10 @@ const ContactForm = () => {
                             value={forms.subject}
                             type="text"
                             name="subject">
-                            <option>Choose a Service</option>
-                            <option>Web Design</option>
-                            <option>Web Development</option>
-                            <option>Marketing</option>
+                            <option>Choisir un service</option>
+                            <option>Développement Web</option>
+                            <option>Jeux Vidéo</option>
+                            <option>Mobile</option>
                         </select>
                         {validator.message('subject', forms.subject, 'required')}
                     </div>

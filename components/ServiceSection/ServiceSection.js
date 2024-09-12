@@ -140,7 +140,7 @@ const ServiceSection = (props) => {
                     </defs>
                 </svg>
             </div>
-            <ServiceSingle open={open} onClose={handleClose} title={state.sTitle} dImg={state.sImgS} sImg1={state.ssImg1} sImg2={state.ssImg2} />
+            <ServiceSingle open={open} onClose={handleClose} serviceId={state.Id} />
         </div>
     );
 }

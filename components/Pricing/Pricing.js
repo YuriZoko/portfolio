@@ -30,7 +30,7 @@ const Pricing = (props) => {
                                     <div className="wpo-pricing-bottom-text">
                                         <ul>
                                             <li>Softwere Development</li>
-                                            <li>Web Development</li>
+                                            <li>Jeux Vidéo</li>
                                             <li>Digital Marketing</li>
                                             <li>Graphic Design</li>
                                             <li>24/Support</li>
@@ -55,7 +55,7 @@ const Pricing = (props) => {
                                     <div className="wpo-pricing-bottom-text">
                                         <ul>
                                             <li>Softwere Development</li>
-                                            <li>Web Development</li>
+                                            <li>Jeux Vidéo</li>
                                             <li>Digital Marketing</li>
                                             <li>Graphic Design</li>
                                             <li>24/Support</li>
@@ -80,7 +80,7 @@ const Pricing = (props) => {
                                     <div className="wpo-pricing-bottom-text">
                                         <ul>
                                             <li>Softwere Development</li>
-                                            <li>Web Development</li>
+                                            <li>Jeux Vidéo</li>
                                             <li>Digital Marketing</li>
                                             <li>Graphic Design</li>
                                             <li>24/Support</li>

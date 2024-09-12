@@ -18,7 +18,7 @@ const Projects = [
        psub1img1:'images/project-single/p1.jpg',
        psub1img2:'images/project-single/p2.jpg',
        title:'Follio - Multipurpose Portfolio HTML5 Template', 
-       subTitle:'Web Design',    
+       subTitle:'Développement Web',    
     },
     {
       Id:'3',
@@ -36,7 +36,7 @@ const Projects = [
       psub1img1:'images/project-single/p1.jpg',
       psub1img2:'images/project-single/p2.jpg',
       title:'Follio - Multipurpose Portfolio HTML5 Template', 
-      subTitle:'Web Design',    
+      subTitle:'Développement Web',    
    },
    
     
