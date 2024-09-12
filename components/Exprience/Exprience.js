@@ -39,7 +39,10 @@ const ExprienceSec = (props) => {
     return (
         <div className="wpo-work-area section-padding">
             <div className="container">
-                <SectionTitle Title={'My Work Experience'} />
+            <SectionTitle 
+                Title={'Mes Expériences Professionnelles'} 
+                Description={'Au fil de mes années de pratique en tant que développeur web et créateur de jeux vidéo, j\'ai eu l\'opportunité de travailler sur une variété de projets. De la conception d\'applications web sur mesure à l\'élaboration de systèmes complexes de gameplay, chaque expérience m\'a permis d\'acquérir des compétences précieuses et de perfectionner mon savoir-faire technique. Mon parcours est marqué par la volonté constante de repousser les limites du développement numérique pour offrir des solutions innovantes et performantes.'} 
+            />
                 <div className="wpo-work-wrap">
                     {Expriences.map((exprience, exp) => (
                         <div className="wpo-work-item" key={exp}>
