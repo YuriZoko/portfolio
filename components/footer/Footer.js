@@ -97,7 +97,7 @@ const Footer = (props) => {
                 <div className="container">
                     <div className="row">
                         <div className="separator"></div>
-                        <p className="copyright">Copyright &copy; 2022 Elito. All rights reserved.</p>
+                        <p className="copyright">Copyright &copy; 2024 Florian GIRARD. All rights reserved.</p>
                     </div>
                 </div>
             </div>
