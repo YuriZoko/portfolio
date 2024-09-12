@@ -1,14 +1,14 @@
 const Services = [
     {
         Id: '1',
-        sImgS: 'images/service-single/graphics/img-1.jpg',
+        sImgS: 'images/service-single/development/site-internet.webp',
         sTitle: 'Création de sites web sur mesure',
         description: 'Conception et développement de sites web personnalisés, optimisés pour le SEO et adaptés à tous les appareils.',
         des2: 'J\'utilise des technologies comme HTML5, CSS3, JavaScript, et des frameworks comme React ou Vue.js.',
         des3: 'Vous bénéficiez d\'un site performant, sécurisé et compatible sur tous les navigateurs et appareils.',
         icon: 'flaticon-vector',
-        ssImg1: 'images/service-single/graphics/img-2.jpg',
-        ssImg2: 'images/service-single/graphics/img-3.jpg',
+        ssImg1: 'images/service-single/development/site-web-1.webp',
+        ssImg2: 'images/service-single/development/site-web-2.webp',
         skills: [
             'Création de sites web robustes et sécurisés.',
             'Adaptation aux appareils mobiles et optimisation pour le SEO.',
@@ -19,14 +19,14 @@ const Services = [
     },
     {
         Id: '2',
-        sImgS: 'images/service-single/brand/img-1.jpg',
+        sImgS: 'images/service-single/development/web-app.webp',
         sTitle: 'Développement d\'applications web',
         description: 'Conception d\'applications web interactives avec des frameworks comme React et Node.js pour des performances optimales.',
         des2: 'Je développe des applications robustes et évolutives adaptées aux besoins de vos utilisateurs.',
         des3: 'De la conception à la mise en production, je m\'assure que votre application web fonctionne sans accroc.',
         icon: 'flaticon-palette',
-        ssImg1: 'images/service-single/brand/img-2.jpg',
-        ssImg2: 'images/service-single/brand/img-3.jpg',
+        ssImg1: 'images/service-single/development/web-app-1.webp',
+        ssImg2: 'images/service-single/development/web-app-2.webp',
         skills: [
             'Conception d\'applications web performantes et évolutives.',
             'Utilisation de React et Node.js pour des applications interactives.',
@@ -37,14 +37,14 @@ const Services = [
     },
     {
         Id: '3',
-        sImgS: 'images/service-single/ux/img-1.jpg',
+        sImgS: 'images/service-single/development/maintenance.webp',
         sTitle: 'Maintenance et optimisation de sites web',
         description: 'Amélioration des performances, de la sécurité, et gestion des mises à jour de votre site.',
         des2: 'Je propose des audits complets et des recommandations pour optimiser votre site web.',
         des3: 'Votre site restera toujours à jour et performant grâce à une maintenance continue.',
         icon: 'flaticon-add',
-        ssImg1: 'images/service-single/ux/img-3.jpg',
-        ssImg2: 'images/service-single/ux/img-3.jpg',
+        ssImg1: 'images/service-single/development/maintenance-1.webp',
+        ssImg2: 'images/service-single/development/maintenance-2.webp',
         skills: [
             'Audits de performance et optimisation du code.',
             'Maintenance de la sécurité et gestion des mises à jour.',
