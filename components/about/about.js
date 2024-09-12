@@ -46,13 +46,13 @@ const About = (props) => {
                                 <div className="grid">
                                     <div className="grid-inner">
                                         <h3><span data-count="72">72</span>%</h3>
-                                        <p>C#</p>
+                                        <p>Flutter</p>
                                     </div>
                                 </div>
                                 <div className="grid">
                                     <div className="grid-inner">
                                         <h3><span data-count="43">43</span>%</h3>
-                                        <p>C++</p>
+                                        <p>C#</p>
                                     </div>
                                 </div>
                                 <div className="grid">

@@ -41,9 +41,6 @@ const Header = (props) => {
                                         <li>
                                             <Link activeClass="active" to="contact" spy={true} smooth={true}  duration={500}>Contact</Link>
                                         </li>
-                                        <li>
-                                            <Link activeClass="active" to="blog" spy={true} smooth={true}  duration={500}>Blog</Link>
-                                        </li>
                                     </ul>
 
                                 </div>
