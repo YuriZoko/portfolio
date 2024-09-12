@@ -76,7 +76,7 @@ const ProjectSection = (props) => {
                     <div className="row align-items-center">
                         <div className="col-lg-4 col-12">
                             <div className="title">
-                                <h2>Recent Work.</h2>
+                                <h2>Projets Récents.</h2>
                                 <p>Must explain to you how all this mistaken idea pleasure
                                     born and give you a complete account.</p>
                             </div>

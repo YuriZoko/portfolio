@@ -4,31 +4,31 @@ import SectionTitle from '../SectionTitle/SectionTitle'
 
 const Expriences = [
     {
-        date: '2015 - 2016',
-        logo: 'images/work/1.png',
-        position: 'Junior Visual Designer',
-        companyName: 'Trapeza Group, USA.',
-        workFrom: '',
-    },
-    {
-        date: '2017 - 2018',
-        logo: 'images/work/2.png',
-        position: 'UI/UX Designer',
-        companyName: 'Gallerie Ontario, Canada',
+        date: '2014 - 2019',
+        logo: 'images/work/gmod.png',
+        position: 'Developpeur LUA',
+        companyName: 'Florian GIRARD, France',
         workFrom: '(Remote)',
     },
     {
-        date: '2019 - 2020',
-        logo: 'images/work/3.png',
-        position: 'Seinor UI/UX Desinger',
-        companyName: 'Morson Hybrid, Canada',
-        workFrom: '',
+        date: '2019 - 2022',
+        logo: 'images/work/tp.png',
+        position: 'Developpeur SQF',
+        companyName: 'The-Programmer, France',
+        workFrom: '(Remote)',
     },
     {
-        date: '2019 - Present',
-        logo: 'images/work/4.png',
-        position: 'Product Designer',
-        companyName: 'Myant Inc. Etobicoke, ON',
+        date: '2022 - Maintenant',
+        logo: 'images/work/tp.png',
+        position: 'Leader',
+        companyName: 'The-Programmer, France',
+        workFrom: '(Remote)',
+    },
+    {
+        date: '2022 - Maintenant',
+        logo: 'images/work/zokogames.png',
+        position: 'Freelance',
+        companyName: 'Florian GIRARD, France',
         workFrom: '(Remote)',
     },
 
@@ -52,7 +52,7 @@ const ExprienceSec = (props) => {
                                 <li className="position">{exprience.position} <span>{exprience.companyName} <span>{exprience.workFrom}</span></span></li>
                                 <li className="link">
                                     <Link href="/">
-                                        Go to website
+                                        Visiter le site
                                     </Link>
                                 </li>
                             </ul>
