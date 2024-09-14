@@ -8,7 +8,7 @@ const Expriences = [
         logo: 'images/work/gmod.png',
         position: 'Developpeur LUA',
         companyName: 'Florian GIRARD, France',
-        workFrom: '(Remote)',
+        workFrom: '(A distance)',
         link: 'https://www.gmodstore.com/',
     },
     {
@@ -16,7 +16,7 @@ const Expriences = [
         logo: 'images/work/tp.png',
         position: 'Developpeur SQF',
         companyName: 'The-Programmer, France',
-        workFrom: '(Remote)',
+        workFrom: '(A distance)',
         link: 'https://www.the-programmer.com/',
     },
     {
@@ -24,7 +24,7 @@ const Expriences = [
         logo: 'images/work/tp.png',
         position: 'Leader',
         companyName: 'The-Programmer, France',
-        workFrom: '(Remote)',
+        workFrom: '(A distance)',
         link: 'https://www.the-programmer.com/',
     },
     {
@@ -32,7 +32,7 @@ const Expriences = [
         logo: 'images/work/zokogames.png',
         position: 'Freelance',
         companyName: 'Florian GIRARD, France',
-        workFrom: '(Remote)',
+        workFrom: '(A distance)',
         link: 'https://florian-girard.dev/',
     },
 

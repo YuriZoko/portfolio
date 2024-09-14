@@ -9,7 +9,7 @@ import Navbar from '../components/Navbar/Navbar';
 import ProjectSection from '../components/ProjectSection/ProjectSection';
 import Scrollbar from '../components/scrollbar/scrollbar';
 import ServiceSection from '../components/ServiceSection/ServiceSection';
-import Testimonial from '../components/Testimonial/Testimonial';
+import FormationSec from '../components/formation/Formation';
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
                 <ServiceSection/>
                 <ExprienceSec/>
                 <ProjectSection/>
-                <Testimonial/>
+                <FormationSec/>
                 <ContactArea/>
                 <Footer/>
                 <Scrollbar/>
