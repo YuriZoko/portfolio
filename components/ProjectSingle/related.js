@@ -7,7 +7,7 @@ const RelatedProject = () => {
     return (
         <div className="wpo-project-single-item">
             <div className="wpo-project-single-title">
-                <h3>Related Projects</h3>
+                <h3>Autres Projets</h3>
             </div>
             <div className="wpo-project-area-s2">
                 <div className="wpo-project-wrap">
