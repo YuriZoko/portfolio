@@ -16,17 +16,14 @@ const Footer = (props) => {
                             <div className="widget about-widget">
                                 <div className="logo widget-title">
                                     <Link className="site-logo" to="/"><img
-                                        src="images/logo.png" alt=""/>Elito.</Link>
+                                        src="images/logo.png" alt=""/>Florian GIRARD</Link>
                                 </div>
-                                <p>Welcome and open yourself to your truest love this year with us! With the Release
-                                    Process</p>
+                                <p>Passionné par l'innovation numérique et la création d'expériences interactives uniques. Explorez mes projets et découvrez mon parcours à travers mes réalisations.</p>
                                 <div className="social-icons">
                                     <ul>
-                                        <li><Link to="/"><i className="ti-facebook"></i></Link></li>
-                                        <li><Link to="/"><i className="ti-twitter-alt"></i></Link></li>
                                         <li><Link to="/"><i className="ti-linkedin"></i></Link></li>
-                                        <li><Link to="/"><i className="ti-pinterest"></i></Link></li>
-                                        <li><Link to="/"><i className="ti-vimeo-alt"></i></Link></li>
+                                        <li><Link to="/"><i className="ti-github"></i></Link></li>
+                                        <li><Link to="/"><i className="ti-youtube"></i></Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -37,40 +34,34 @@ const Footer = (props) => {
                                     <h3>Navigation</h3>
                                 </div>
                                 <ul>
-                                    <li><Link to="about" spy={true} smooth={true}  duration={500}>About us</Link></li>
-                                    <li><Link to="contact" spy={true} smooth={true}  duration={500}>Contact us</Link></li>
-                                    <li><Link to="portfolio" spy={true} smooth={true}  duration={500}>Projects</Link></li>
-                                    <li><Link to="blog" spy={true} smooth={true}  duration={500}>Recent Post</Link></li>
+                                    <li><Link to="about" spy={true} smooth={true}  duration={500}>A propos</Link></li>
+                                    <li><Link to="contact" spy={true} smooth={true}  duration={500}>Contact</Link></li>
+                                    <li><Link to="portfolio" spy={true} smooth={true}  duration={500}>Projets Récents</Link></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col col-lg-3 col-md-6 col-12">
                             <div className="widget link-widget service-link-widget">
                                 <div className="widget-title">
-                                    <h3>All Services</h3>
+                                    <h3>Mes Services</h3>
                                 </div>
                                 <ul>
                                     <li><Link to="service" spy={true} smooth={true}  duration={500}>Développement Web</Link></li>
                                     <li><Link to="service" spy={true} smooth={true}  duration={500}>Jeux Vidéo</Link></li>
-                                    <li><Link to="service" spy={true} smooth={true}  duration={500}>Brand Identity</Link></li>
-                                    <li><Link to="service" spy={true} smooth={true}  duration={500}>Digital Marketing</Link></li>
+                                    <li><Link to="service" spy={true} smooth={true}  duration={500}>Développement Mobile</Link></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col col-lg-3 col-md-6 col-12">
                             <div className="widget newsletter-widget">
                                 <div className="widget-title">
-                                    <h3>Newsletter</h3>
+                                    <h3>Partenaire</h3>
                                 </div>
-                                <p>Must explain to you how all this mistaken idea pleasure born and give you a complete account.</p>
-                                <form onSubmit={SubmitHandler}>
-                                    <div className="input-1">
-                                        <input type="email" className="form-control" placeholder="Email Address *" required/>
-                                    </div>
-                                    <div className="submit clearfix">
-                                        <button type="submit"><i className="ti-email"></i></button>
-                                    </div>
-                                </form>
+                                <div className="partner-item">
+                                    <a href="https://www.the-programmer.com/" target="_blank" rel="noopener noreferrer">
+                                        <img src="images/work/tp.png" alt="The-Programmer Logo" style={{ width: '100px' }} />
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -95,7 +86,7 @@ const Footer = (props) => {
                 <div className="container">
                     <div className="row">
                         <div className="separator"></div>
-                        <p className="copyright">Copyright &copy; 2024 Florian GIRARD. All rights reserved.</p>
+                        <p className="copyright">Copyright &copy; 2024 Florian GIRARD. Tous droits réservés.</p>
                     </div>
                 </div>
             </div>
