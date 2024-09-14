@@ -112,8 +112,8 @@ const ProjectSingle = ({ maxWidth, open, onClose, projectId }) => {
                                         <div className="wpo-project-single-item">
                                             <div className="wpo-project-contact-area">
                                                 <div className="wpo-contact-title">
-                                                    <h2>Have project in mind? Let's discuss</h2>
-                                                    <p>Get in touch with us to see how we can help you with your project</p>
+                                                    <h2>Vous avez un projet en tête ? Discutons-en</h2>
+                                                    <p>Contactez-moi pour savoir comment je peux vous aider dans votre projet.</p>
                                                 </div>
                                                 <div className="wpo-contact-form-area">
                                                     <Contact />
