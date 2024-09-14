@@ -1,12 +1,12 @@
-
 import React, { Fragment } from 'react';
-import { Dialog, Grid, } from '@mui/material'
+import { Dialog, Grid } from '@mui/material';
 import Contact from './contact';
 import RelatedProject from './related';
+import Projects from '../../api/project'
 
-
-const ProjectSingle = ({ maxWidth, open, onClose, title, pImg, psub1img1, psub1img2, }) => {
-
+const ProjectSingle = ({ maxWidth, open, onClose, projectId }) => {
+    const project = Projects.find(proj => proj.Id === projectId);
+    if (!project) return null;
 
     return (
         <Fragment>
@@ -29,119 +29,85 @@ const ProjectSingle = ({ maxWidth, open, onClose, title, pImg, psub1img1, psub1i
                                             <div className="row align-items-center mb-5">
                                                 <div className="col-lg-7">
                                                     <div className="wpo-project-single-title">
-                                                        <h3>{title} Project</h3>
+                                                        <h3>{project.title}</h3>
                                                     </div>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus dis posuere
-                                                        amet
-                                                        tincidunt commodo, velit. Ipsum, hac nibh fermentum nisi, platea condimentum
-                                                        cursus
-                                                        velit dui. Massa volutpat odio facilisis purus sit elementum. Non.</p>
-                                                    <p>Hac nibh fermentum nisi, platea condimentum cursus velit dui. Massa volutpat
-                                                        odio
-                                                        facilisis purus sit elementum. Non, sed velit dictum quam. Id risus pharetra
-                                                        est, at
-                                                        rhoncus, nec ullamcorper tincidunt. Id aliquet duis sollicitudin diam</p>
+                                                    <p>{project.description}</p>
                                                 </div>
                                                 <div className="col-lg-5">
                                                     <div className="wpo-project-single-content-des-right">
                                                         <ul>
-                                                            <li>Location :<span>7 Lake Street,London</span></li>
-                                                            <li>Client :<span>wpOceans</span></li>
-                                                            <li>Consult :<span>Harry Johnson</span></li>
-                                                            <li>Project Type :<span>Elito React</span></li>
-                                                            <li>Duration :<span>6 Month</span></li>
-                                                            <li>Completion :<span>15 Apr 2022</span></li>
-                                                            <li>Share :<span>Creative, Portfolio</span></li>
+                                                            <li>Lieu :<span>{project.projectDetails.location}</span></li>
+                                                            <li>Client :<span>{project.projectDetails.client}</span></li>
+                                                            <li>Interlocuteur :<span>{project.projectDetails.consult}</span></li>
+                                                            <li>Type :<span>{project.projectDetails.projectType}</span></li>
+                                                            <li>Durée :<span>{project.projectDetails.duration}</span></li>
+                                                            <li>Date de fin :<span>{project.projectDetails.completion}</span></li>
+                                                            <li>Tags :<span>{project.projectDetails.share}</span></li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="wpo-project-single-main-img">
                                                 <div className="thumbnail">
-                                                    <img src={pImg} alt="" />
+                                                    <img src={project.pImg} alt={project.title} />
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div className="wpo-project-single-item list-widget">
                                             <div className="row">
                                                 <div className="col-lg-6">
                                                     <div className="wpo-project-single-title">
-                                                        <h3>Our Strategies</h3>
+                                                        <h3>Ma Stratégie</h3>
                                                     </div>
-                                                    <p>Massa volutpat odio facilisis purus sit elementum. Non, sed velit dictum
-                                                        quam. Id
-                                                        risus pharetra est, at rhoncus, nec ullamcorper tincidunt. Id aliquet duis
-                                                        sollicitudin diam.</p>
+                                                    <p>{project.strategies.description}</p>
                                                     <ul>
-                                                        <li>Non saed velit dictum quam risus pharetra esta.</li>
-                                                        <li>Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt.</li>
-                                                        <li>Hac nibh fermentum nisi, platea condimentum cursus.</li>
-                                                        <li>Massa volutpat odio facilisis purus sit elementum.</li>
-                                                        <li>Elit curabitur amet risus bibendum.</li>
+                                                        {project.strategies.points.map((point, index) => (
+                                                            <li key={index}>{point}</li>
+                                                        ))}
                                                     </ul>
                                                 </div>
                                                 <div className="col-lg-6">
                                                     <div className="wpo-project-single-item-quote">
-                                                        <p>"Amazing looking theme and instantly turns your application into a great
-                                                            looking one. Really shows that pro_ fessionals built this theme up. Very
-                                                            happy with the way the theme looks ."</p>
-                                                        <span>Robert - <span>Yellow Theme</span></span>
+                                                        <p>{project.quote.text}</p>
+                                                        <span>{project.quote.author}</span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div className="wpo-project-single-item">
                                             <div className="wpo-project-single-title">
-                                                <h3>Our approach</h3>
+                                                <h3>Mon Approche</h3>
                                             </div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat suspendisse aenean
-                                                tellus augue morbi risus. Sit morbi vitae morbi sed urna sed purus. Orci facilisi
-                                                eros sed pellentesque. Risus id sed tortor sed scelerisque. Vestibulum elit
-                                                elementum, magna id viverra non, velit. Pretium, eros, porttitor fusce auctor vitae
-                                                id. Phasellus scelerisque nibh eleifend vel enim mauris purus. Rutrum vel sem
-                                                adipiscing nisi vulputate molestie scelerisque molestie ultrices. Eu, fusce
-                                                vulputate diam interdum morbi ac a.</p>
+                                            <p>{project.approach}</p>
                                         </div>
-                                        <div className="wpo-project-single-gallery">
-                                            <div className="row mt-4">
-                                                <div className="col-md-6 col-sm-6 col-12">
-                                                    <div className="wpo-p-details-img">
-                                                        <img src={psub1img1} alt="" />
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6 col-sm-6 col-12">
-                                                    <div className="wpo-p-details-img">
-                                                        <img src={psub1img2} alt="" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                         <div className="wpo-project-single-item list-widget">
                                             <div className="row">
                                                 <div className="col-lg-6">
                                                     <div className="wpo-project-single-title">
-                                                        <h3>Resieved goals</h3>
+                                                        <h3>Objectifs</h3>
                                                     </div>
                                                     <ul>
-                                                        <li>Non saed velit dictum quam risus pharetra esta.</li>
-                                                        <li>Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt.</li>
-                                                        <li>Hac nibh fermentum nisi, platea condimentum cursus.</li>
-                                                        <li>Massa volutpat odio facilisis purus sit elementum.</li>
+                                                        {project.goals.map((goal, index) => (
+                                                            <li key={index}>{goal}</li>
+                                                        ))}
                                                     </ul>
                                                 </div>
-                                                <div className="col-lg-6 list-widget-s">
+                                                <div className="col-lg-6">
                                                     <div className="wpo-project-single-title">
-                                                        <h3>Results</h3>
+                                                        <h3>Résultats</h3>
                                                     </div>
                                                     <ul>
-                                                        <li>Mauris dignissim blandit cursus imperdiet accumsan lorem.</li>
-                                                        <li>Nam id in non sed cras purus nunc et.</li>
-                                                        <li>Mauris orci, cursus nisl odio est adipiscing gravida magna eget.</li>
-                                                        <li>Quis mauris vel felis convallis nulla dignissim.</li>
+                                                        {project.results.map((result, index) => (
+                                                            <li key={index}>{result}</li>
+                                                        ))}
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
+
                                         <RelatedProject />
                                         <div className="wpo-project-single-item">
                                             <div className="wpo-project-contact-area">
@@ -164,5 +130,5 @@ const ProjectSingle = ({ maxWidth, open, onClose, title, pImg, psub1img1, psub1i
         </Fragment>
     );
 }
-export default ProjectSingle;
 
+export default ProjectSingle;
