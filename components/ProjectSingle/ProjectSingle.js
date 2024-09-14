@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Dialog, Grid } from '@mui/material';
 import Contact from './contact';
 import RelatedProject from './related';
-import Projects from '../../api/project'
+import Projects from '../../api/project';
 
 const ProjectSingle = ({ maxWidth, open, onClose, projectId }) => {
     const project = Projects.find(proj => proj.Id === projectId);
@@ -107,6 +107,14 @@ const ProjectSingle = ({ maxWidth, open, onClose, projectId }) => {
                                                 </div>
                                             </div>
                                         </div>
+
+                                        {project.projectLink && (
+                                            <div className="wpo-project-single-item-projectLink">
+                                                <a class="theme-btn" href={project.projectLink} target="_blank" rel="noopener noreferrer">
+                                                    Cliquez ici pour visiter le site du projet
+                                                </a>
+                                            </div>
+                                        )}
 
                                         <RelatedProject />
                                         <div className="wpo-project-single-item">

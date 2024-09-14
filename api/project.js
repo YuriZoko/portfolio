@@ -39,7 +39,8 @@ const Projects = [
           'Réduction du temps de chargement à moins de 2 secondes.',
           'Apprentissage du SAAS.',
           'Retour positif lors de la soutenance.'
-      ]
+      ],
+      projectLink: 'https://github.com/YuriZoko/ohmyfood'
    },
    {
       Id: '2',
@@ -82,7 +83,8 @@ const Projects = [
           'Gestion efficace des serveurs de jeux depuis n\'importe où avec un téléphone.',
           'Ajout de fonctionnalités dynamiques pour étendre les capacités de l\'application.',
           'Réduction du temps de gestion des serveurs et des interactions avec la base de données.'
-      ]
+      ],
+      projectLink: 'https://www.the-programmer.com/product/admin-panel-multigame/'
    },
    {
       Id: '3',
@@ -126,7 +128,8 @@ const Projects = [
           'Réduction du temps nécessaire pour convertir les scripts grâce à l\'outil intégré.',
           'Compatibilité étendue avec divers frameworks et scripts.',
           'Retour très positif des utilisateurs sur la facilité d\'utilisation et de personnalisation.'
-      ]
+      ],
+      projectLink: 'https://www.the-programmer.com/product/advanced-notifications/'
     },
    {
       Id: '4',
@@ -169,7 +172,8 @@ const Projects = [
           'Augmentation de la satisfaction des clients grâce à un suivi précis.',
           'Interface utilisateur très appréciée pour sa simplicité et son efficacité.',
           'Amélioration de la gestion des paiements.'
-      ]
+      ],
+      projectLink: 'https://custom.the-programmer.com/'
    }
 ];
 

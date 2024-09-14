@@ -5739,6 +5739,11 @@ ul.smothscroll a:hover {
 .wpo-project-single-area .wpo-project-single-wrap .wpo-project-single-item:last-child {
   margin-bottom: 0;
 }
+.wpo-project-single-area .wpo-project-single-wrap .wpo-project-single-item-projectLink {
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: center;
+}
 .wpo-project-single-area .wpo-project-single-wrap .wpo-project-single-item .wpo-project-single-main-img {
   margin-bottom: 30px;
 }
