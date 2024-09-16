@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import SimpleReactValidator from 'simple-react-validator';
-
 
 const ContactForm = () => {
 
@@ -11,11 +10,23 @@ const ContactForm = () => {
         phone: '',
         message: ''
     });
+
     const [validator] = useState(new SimpleReactValidator({
-        className: 'errorMessage'
+        className: 'errorMessage',
+        messages: {
+            required: 'Ce champ est requis.',
+            alpha_space: 'Ce champ ne peut contenir que des lettres et des espaces.',
+            email: 'Veuillez entrer une adresse e-mail valide.',
+            phone: 'Veuillez entrer un numéro de téléphone valide.',
+            min: 'Ce champ doit contenir au moins :min caractères.',
+            max: 'Ce champ ne peut contenir plus de :max caractères.',
+            between: 'Ce champ doit contenir entre :min et :max caractères.',
+            confirmed: 'Les mots de passe ne correspondent pas.'
+        }
     }));
+
     const changeHandler = e => {
-        setForms({ ...forms, [e.target.name]: e.target.value })
+        setForms({ ...forms, [e.target.name]: e.target.value });
         if (validator.allValid()) {
             validator.hideMessages();
         } else {
@@ -33,7 +44,7 @@ const ContactForm = () => {
                 subject: '',
                 phone: '',
                 message: ''
-            })
+            });
         } else {
             validator.showMessages();
         }
@@ -70,7 +81,7 @@ const ContactForm = () => {
                     <div className="form-field">
                         <input
                             value={forms.phone}
-                            type="phone"
+                            type="text"
                             name="phone"
                             onBlur={(e) => changeHandler(e)}
                             onChange={(e) => changeHandler(e)}
@@ -84,12 +95,11 @@ const ContactForm = () => {
                             onBlur={(e) => changeHandler(e)}
                             onChange={(e) => changeHandler(e)}
                             value={forms.subject}
-                            type="text"
                             name="subject">
-                            <option>Choisir un service</option>
-                            <option>Développement Web</option>
-                            <option>Jeux Vidéo</option>
-                            <option>Mobile</option>
+                            <option value="">Choisir un service</option>
+                            <option value="Développement Web">Développement Web</option>
+                            <option value="Jeux Vidéo">Jeux Vidéo</option>
+                            <option value="Mobile">Mobile</option>
                         </select>
                         {validator.message('subject', forms.subject, 'required')}
                     </div>
@@ -99,7 +109,6 @@ const ContactForm = () => {
                         onBlur={(e) => changeHandler(e)}
                         onChange={(e) => changeHandler(e)}
                         value={forms.message}
-                        type="text"
                         name="message"
                         placeholder="Message">
                     </textarea>
@@ -110,7 +119,7 @@ const ContactForm = () => {
                 <button type="submit" className="theme-btn">Envoyer</button>
             </div>
         </form >
-    )
+    );
 }
 
 export default ContactForm;

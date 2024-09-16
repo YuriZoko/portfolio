@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import SimpleReactValidator from 'simple-react-validator';
 
-
 const Contact = () => {
-
 
     const [forms, setForms] = useState({
         name: '',
@@ -11,11 +9,22 @@ const Contact = () => {
         subject: '',
         message: ''
     });
+
     const [validator] = useState(new SimpleReactValidator({
-        className: 'errorMessage'
+        className: 'errorMessage',
+        messages: {
+            required: 'Ce champ est requis.',
+            alpha_space: 'Ce champ ne peut contenir que des lettres et des espaces.',
+            email: 'Veuillez entrer une adresse e-mail valide.',
+            min: 'Ce champ doit contenir au moins :min caractères.',
+            max: 'Ce champ ne peut contenir plus de :max caractères.',
+            between: 'Ce champ doit contenir entre :min et :max caractères.',
+            confirmed: 'Les mots de passe ne correspondent pas.'
+        }
     }));
+
     const changeHandler = e => {
-        setForms({ ...forms, [e.target.name]: e.target.value })
+        setForms({ ...forms, [e.target.name]: e.target.value });
         if (validator.allValid()) {
             validator.hideMessages();
         } else {
@@ -32,12 +41,11 @@ const Contact = () => {
                 email: '',
                 subject: '',
                 message: ''
-            })
+            });
         } else {
             validator.showMessages();
         }
     };
-
 
     return (
         <form onSubmit={(e) => submitHandler(e)} className="contact-validation-active" >
@@ -52,8 +60,8 @@ const Contact = () => {
                             onBlur={(e) => changeHandler(e)}
                             onChange={(e) => changeHandler(e)}
                             placeholder="Votre nom" />
+                        {validator.message('name', forms.name, 'required|alpha_space')}
                     </div>
-                    {validator.message('name', forms.name, 'required|alpha_space')}
                 </div>
                 <div className="col col-lg-6 col-md-6 col-12">
                     <div className="form-field">
@@ -74,14 +82,13 @@ const Contact = () => {
                             onBlur={(e) => changeHandler(e)}
                             onChange={(e) => changeHandler(e)}
                             value={forms.subject}
-                            type="text"
                             name="subject">
-                            <option>Choisir un service</option>
-                            <option>Développement Web</option>
-                            <option>Jeux Vidéo</option>
-                            <option>Marketing</option>
+                            <option value="">Choisir un service</option>
+                            <option value="Développement Web">Développement Web</option>
+                            <option value="Jeux Vidéo">Jeux Vidéo</option>
+                            <option value="Marketing">Marketing</option>
                         </select>
-                        {validator.message('subject', forms.subject, 'required|alpha_space')}
+                        {validator.message('subject', forms.subject, 'required')}
                     </div>
                 </div>
                 <div className="col fullwidth col-lg-12">
@@ -90,7 +97,6 @@ const Contact = () => {
                         onBlur={(e) => changeHandler(e)}
                         onChange={(e) => changeHandler(e)}
                         value={forms.message}
-                        type="text"
                         name="message"
                         placeholder="Message">
                     </textarea>
@@ -98,10 +104,10 @@ const Contact = () => {
                 </div>
             </div>
             <div className="submit-area">
-                <button type="submit" className="theme-btn"> Envoyer</button>
+                <button type="submit" className="theme-btn">Envoyer</button>
             </div>
         </form>
-    )
+    );
 }
 
 export default Contact;
