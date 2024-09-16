@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import SimpleReactValidator from 'simple-react-validator';
 
 const Contact = () => {
-
+    const form = useRef();
     const [forms, setForms] = useState({
         name: '',
         email: '',
@@ -24,31 +25,37 @@ const Contact = () => {
     }));
 
     const changeHandler = e => {
-        setForms({ ...forms, [e.target.name]: e.target.value });
-        if (validator.allValid()) {
-            validator.hideMessages();
-        } else {
-            validator.showMessages();
-        }
+        const { name, value } = e.target;
+        setForms(prevForms => ({ ...prevForms, [name]: value }));
+        validator.showMessageFor(name);
     };
 
     const submitHandler = e => {
         e.preventDefault();
         if (validator.allValid()) {
-            validator.hideMessages();
-            setForms({
-                name: '',
-                email: '',
-                subject: '',
-                message: ''
-            });
+            emailjs
+                .sendForm('service_g1j5rm5', 'template_912n5t8', form.current, 'GIlmZqVXwRtIsX_OQ')
+                .then(
+                    result => {
+                        setForms({
+                            name: '',
+                            email: '',
+                            subject: '',
+                            message: ''
+                        });
+                    },
+                    error => {
+                        console.log('FAILED...', error.text);
+                    }
+                );
         } else {
             validator.showMessages();
+            setForms({ ...forms });
         }
     };
 
     return (
-        <form onSubmit={(e) => submitHandler(e)} className="contact-validation-active">
+        <form ref={form} onSubmit={submitHandler} className="contact-validation-active">
             <div className="row">
                 <div className="col col-lg-6 col-md-6 col-12">
                     <div className="form-field">
@@ -57,9 +64,10 @@ const Contact = () => {
                             value={forms.name}
                             type="text"
                             name="name"
-                            onBlur={(e) => changeHandler(e)}
-                            onChange={(e) => changeHandler(e)}
-                            placeholder="Votre nom" />
+                            onBlur={() => validator.showMessageFor('name')}
+                            onChange={changeHandler}
+                            placeholder="Votre nom"
+                        />
                         {validator.message('name', forms.name, 'required|alpha_space')}
                     </div>
                 </div>
@@ -70,19 +78,22 @@ const Contact = () => {
                             value={forms.email}
                             type="email"
                             name="email"
-                            onBlur={(e) => changeHandler(e)}
-                            onChange={(e) => changeHandler(e)}
-                            placeholder="Votre E-mail" />
+                            onBlur={() => validator.showMessageFor('email')}
+                            onChange={changeHandler}
+                            placeholder="Votre E-mail"
+                        />
                         {validator.message('email', forms.email, 'required|email')}
                     </div>
                 </div>
                 <div className="col col-lg-12 col-12">
                     <div className="form-field">
-                        <select className="form-control"
-                            onBlur={(e) => changeHandler(e)}
-                            onChange={(e) => changeHandler(e)}
+                        <select
+                            className="form-control"
+                            name="subject"
                             value={forms.subject}
-                            name="subject">
+                            onBlur={() => validator.showMessageFor('subject')}
+                            onChange={changeHandler}
+                        >
                             <option value="">Choisir un service</option>
                             <option value="Développement Web">Développement Web</option>
                             <option value="Jeux Vidéo">Jeux Vidéo</option>
@@ -94,12 +105,12 @@ const Contact = () => {
                 <div className="col fullwidth col-lg-12">
                     <textarea
                         className="form-control"
-                        onBlur={(e) => changeHandler(e)}
-                        onChange={(e) => changeHandler(e)}
-                        value={forms.message}
                         name="message"
-                        placeholder="Message">
-                    </textarea>
+                        value={forms.message}
+                        onBlur={() => validator.showMessageFor('message')}
+                        onChange={changeHandler}
+                        placeholder="Message"
+                    />
                     {validator.message('message', forms.message, 'required')}
                 </div>
             </div>
