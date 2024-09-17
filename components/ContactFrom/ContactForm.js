@@ -100,7 +100,9 @@ const ContactForm = () => {
                     </div>
                     <div className="col col-lg-12 col-12">
                         <div className="form-field">
+                            <label htmlFor="subject">Choisir un service :</label>
                             <select
+                                id="subject"
                                 name="subject"
                                 value={forms.subject}
                                 onChange={changeHandler}
