@@ -11,6 +11,10 @@ const ContactForm = () => {
         subject: '',
         message: ''
     });
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [messageSent, setMessageSent] = useState(false);
+
     const [validator] = useState(new SimpleReactValidator({
         className: 'errorMessage',
         messages: {
@@ -20,26 +24,27 @@ const ContactForm = () => {
             phone: 'Veuillez entrer un numéro de téléphone valide.'
         }
     }));
-    const [messageSent, setMessageSent] = useState(false);
 
     const changeHandler = e => {
         const { name, value } = e.target;
         setForms(prevForms => ({ ...prevForms, [name]: value }));
-        validator.showMessageFor(name);
     };
 
     const sendEmail = (e) => {
         e.preventDefault();
         if (validator.allValid()) {
+            setIsSubmitting(true);
             emailjs
                 .sendForm('service_g1j5rm5', 'template_912n5t8', form.current, 'GIlmZqVXwRtIsX_OQ')
                 .then(
                     () => {
-                        setForms({ name: '', email: '', phone: '', subject: '', message: '' });
                         setMessageSent(true);
+                        setIsSubmitting(false);
+                        setForms({ name: '', email: '', phone: '', subject: '', message: '' });
                     },
                     (error) => {
                         console.log('FAILED...', error.text);
+                        setIsSubmitting(false);
                     },
                 );
         } else {
@@ -61,8 +66,8 @@ const ContactForm = () => {
                                 name="name"
                                 value={forms.name}
                                 placeholder="Votre nom"
-                                onBlur={() => validator.showMessageFor('name')}
                                 onChange={changeHandler}
+                                disabled={isSubmitting}
                             />
                             {validator.message('name', forms.name, 'required|alpha_space')}
                         </div>
@@ -74,8 +79,8 @@ const ContactForm = () => {
                                 name="email"
                                 value={forms.email}
                                 placeholder="Votre E-mail"
-                                onBlur={() => validator.showMessageFor('email')}
                                 onChange={changeHandler}
+                                disabled={isSubmitting}
                             />
                             {validator.message('email', forms.email, 'required|email')}
                         </div>
@@ -87,8 +92,8 @@ const ContactForm = () => {
                                 name="phone"
                                 value={forms.phone}
                                 placeholder="Numéro de téléphone"
-                                onBlur={() => validator.showMessageFor('phone')}
                                 onChange={changeHandler}
+                                disabled={isSubmitting}
                             />
                             {validator.message('phone', forms.phone, 'required|phone')}
                         </div>
@@ -98,8 +103,8 @@ const ContactForm = () => {
                             <select
                                 name="subject"
                                 value={forms.subject}
-                                onBlur={() => validator.showMessageFor('subject')}
                                 onChange={changeHandler}
+                                disabled={isSubmitting}
                             >
                                 <option value="">Choisir un service</option>
                                 <option value="Développement Web">Développement Web</option>
@@ -114,14 +119,20 @@ const ContactForm = () => {
                             name="message"
                             value={forms.message}
                             placeholder="Message"
-                            onBlur={() => validator.showMessageFor('message')}
                             onChange={changeHandler}
+                            disabled={isSubmitting}
                         />
                         {validator.message('message', forms.message, 'required')}
                     </div>
                 </div>
                 <div className="submit-area">
-                    <button type="submit" className="theme-btn">Envoyer</button>
+                    <button 
+                        type="submit" 
+                        className="theme-btn"
+                        disabled={isSubmitting}
+                    >
+                        {isSubmitting ? 'Envoi en cours...' : 'Envoyer'}
+                    </button>
                 </div>
             </form>
         </>

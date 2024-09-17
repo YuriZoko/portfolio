@@ -5305,6 +5305,12 @@ ul.smothscroll a:hover {
   padding-left: 20px;
 }
 
+.confirmation-message {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
 .info-icon .fi:before {
   font-size: 40px;
   color: #FFE600;

@@ -10,6 +10,9 @@ const Contact = () => {
         subject: '',
         message: ''
     });
+    
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [messageSent, setMessageSent] = useState(false);
 
     const [validator] = useState(new SimpleReactValidator({
         className: 'errorMessage',
@@ -27,25 +30,30 @@ const Contact = () => {
     const changeHandler = e => {
         const { name, value } = e.target;
         setForms(prevForms => ({ ...prevForms, [name]: value }));
-        validator.showMessageFor(name);
     };
 
     const submitHandler = e => {
         e.preventDefault();
+
         if (validator.allValid()) {
+            setIsSubmitting(true);
             emailjs
                 .sendForm('service_g1j5rm5', 'template_912n5t8', form.current, 'GIlmZqVXwRtIsX_OQ')
                 .then(
-                    result => {
+                    () => {
                         setForms({
                             name: '',
                             email: '',
                             subject: '',
                             message: ''
                         });
+                        setMessageSent(true);
+                        validator.hideMessages();
+                        setIsSubmitting(false);
                     },
                     error => {
                         console.log('FAILED...', error.text);
+                        setIsSubmitting(false);
                     }
                 );
         } else {
@@ -55,69 +63,79 @@ const Contact = () => {
     };
 
     return (
-        <form ref={form} onSubmit={submitHandler} className="contact-validation-active">
-            <div className="row">
-                <div className="col col-lg-6 col-md-6 col-12">
-                    <div className="form-field">
-                        <input
+        <>
+            {messageSent && <p className="confirmation-message">Votre message a été envoyé avec succès !</p>}
+
+            <form ref={form} onSubmit={submitHandler} className="contact-validation-active">
+                <div className="row">
+                    <div className="col col-lg-6 col-md-6 col-12">
+                        <div className="form-field">
+                            <input
+                                className="form-control"
+                                value={forms.name}
+                                type="text"
+                                name="name"
+                                onChange={changeHandler}
+                                placeholder="Votre nom"
+                                disabled={isSubmitting}
+                            />
+                            {validator.message('name', forms.name, 'required|alpha_space')}
+                        </div>
+                    </div>
+                    <div className="col col-lg-6 col-md-6 col-12">
+                        <div className="form-field">
+                            <input
+                                className="form-control"
+                                value={forms.email}
+                                type="email"
+                                name="email"
+                                onChange={changeHandler}
+                                placeholder="Votre E-mail"
+                                disabled={isSubmitting}
+                            />
+                            {validator.message('email', forms.email, 'required|email')}
+                        </div>
+                    </div>
+                    <div className="col col-lg-12 col-12">
+                        <div className="form-field">
+                            <select
+                                className="form-control"
+                                name="subject"
+                                value={forms.subject}
+                                onChange={changeHandler}
+                                disabled={isSubmitting}
+                            >
+                                <option value="">Choisir un service</option>
+                                <option value="Développement Web">Développement Web</option>
+                                <option value="Jeux Vidéo">Jeux Vidéo</option>
+                                <option value="Marketing">Marketing</option>
+                            </select>
+                            {validator.message('subject', forms.subject, 'required')}
+                        </div>
+                    </div>
+                    <div className="col fullwidth col-lg-12">
+                        <textarea
                             className="form-control"
-                            value={forms.name}
-                            type="text"
-                            name="name"
-                            onBlur={() => validator.showMessageFor('name')}
+                            name="message"
+                            value={forms.message}
                             onChange={changeHandler}
-                            placeholder="Votre nom"
+                            placeholder="Message"
+                            disabled={isSubmitting}
                         />
-                        {validator.message('name', forms.name, 'required|alpha_space')}
+                        {validator.message('message', forms.message, 'required')}
                     </div>
                 </div>
-                <div className="col col-lg-6 col-md-6 col-12">
-                    <div className="form-field">
-                        <input
-                            className="form-control"
-                            value={forms.email}
-                            type="email"
-                            name="email"
-                            onBlur={() => validator.showMessageFor('email')}
-                            onChange={changeHandler}
-                            placeholder="Votre E-mail"
-                        />
-                        {validator.message('email', forms.email, 'required|email')}
-                    </div>
+                <div className="submit-area">
+                    <button 
+                        type="submit" 
+                        className="theme-btn"
+                        disabled={isSubmitting}
+                    >
+                        {isSubmitting ? 'Envoi en cours...' : 'Envoyer'}
+                    </button>
                 </div>
-                <div className="col col-lg-12 col-12">
-                    <div className="form-field">
-                        <select
-                            className="form-control"
-                            name="subject"
-                            value={forms.subject}
-                            onBlur={() => validator.showMessageFor('subject')}
-                            onChange={changeHandler}
-                        >
-                            <option value="">Choisir un service</option>
-                            <option value="Développement Web">Développement Web</option>
-                            <option value="Jeux Vidéo">Jeux Vidéo</option>
-                            <option value="Marketing">Marketing</option>
-                        </select>
-                        {validator.message('subject', forms.subject, 'required')}
-                    </div>
-                </div>
-                <div className="col fullwidth col-lg-12">
-                    <textarea
-                        className="form-control"
-                        name="message"
-                        value={forms.message}
-                        onBlur={() => validator.showMessageFor('message')}
-                        onChange={changeHandler}
-                        placeholder="Message"
-                    />
-                    {validator.message('message', forms.message, 'required')}
-                </div>
-            </div>
-            <div className="submit-area">
-                <button type="submit" className="theme-btn">Envoyer</button>
-            </div>
-        </form>
+            </form>
+        </>
     );
 }
 
