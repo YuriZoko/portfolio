@@ -97,10 +97,10 @@ const About = (props) => {
                 </svg>
             </div>
             <div className="line-shape-1">
-                <img src="images/about/shape1.png" alt="" />
+                <img src="images/about/shape1.webp" alt="" />
             </div>
             <div className="line-shape-2">
-                <img src="images/about/shape2.png" alt="" />
+                <img src="images/about/shape2.webp" alt="" />
             </div>
         </div>
     )

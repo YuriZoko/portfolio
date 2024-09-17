@@ -97,7 +97,7 @@ const Hero = () => {
                 <img src='images/slider/line-1.png' alt="" />
             </div>
             <div className="line-shape-2">
-                <img src='images/slider/line-2.png' alt="" />
+                <img src='images/slider/line-2.webp' alt="" />
             </div>
         </section>
     )

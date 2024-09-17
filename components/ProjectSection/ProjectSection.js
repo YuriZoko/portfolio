@@ -122,7 +122,7 @@ const ProjectSection = (props) => {
                 <img src='images/project/line-1.png' alt="" />
             </div>
             <div className="line-shape-2">
-                <img src='images/project/line-2.png' alt="" />
+                <img src='images/project/line-2.webp' alt="" />
             </div>
             <ProjectSingle open={open} onClose={handleClose} projectId={state.Id} />
         </div>

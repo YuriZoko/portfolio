@@ -21,7 +21,7 @@ const Header = (props) => {
                             <div className="col-lg-2 col-md-6 col-6">
                                 <div className="navbar-header">
                                     <Link onClick={ClickHandler} className="navbar-brand site-logo" href="/" to=""><img
-                                        src="images/logo.png" alt="" />Florian GIRARD</Link>
+                                        src="images/logo.webp" alt="" />Florian GIRARD</Link>
                                 </div>
                             </div>
                             <div className="col-lg-8 col-md-1 col-1">
@@ -48,9 +48,9 @@ const Header = (props) => {
                             <div className="col-lg-2 col-md-2 col-2">
                                 <div className="header-right">
                                     <div className="header-btn">
-                                        <a onClick={ClickHandler} className="theme-btn" download="My Cv" href="images/cv.jpg"
+                                        <a onClick={ClickHandler} className="theme-btn" download="My Cv" href="images/cv.webp"
                                             title="ImageName">
-                                            <img className="hide-img" alt="ImageName" src="images/cv.jpg" />
+                                            <img className="hide-img" alt="ImageName" src="images/cv.webp" />
                                             Mon CV
                                         </a>
                                     </div>

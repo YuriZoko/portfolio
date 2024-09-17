@@ -16,7 +16,7 @@ const Footer = (props) => {
                             <div className="widget about-widget">
                                 <div className="logo widget-title">
                                     <Link className="site-logo" to="/"><img
-                                        src="images/logo.png" alt=""/>Florian GIRARD</Link>
+                                        src="images/logo.webp" alt=""/>Florian GIRARD</Link>
                                 </div>
                                 <p>Passionné par l'innovation numérique et la création d'expériences interactives uniques. Explorez mes projets et découvrez mon parcours à travers mes réalisations.</p>
                                 <div className="social-icons">
