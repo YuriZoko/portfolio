@@ -48,9 +48,9 @@ const Header = (props) => {
                             <div className="col-lg-2 col-md-2 col-2">
                                 <div className="header-right">
                                     <div className="header-btn">
-                                        <a onClick={ClickHandler} className="theme-btn" download="My Cv" href="images/cv.jpg"
+                                        <a onClick={ClickHandler} className="theme-btn" download="My Cv" href="#"
                                             title="ImageName">
-                                            <img className="hide-img" alt="ImageName" src="images/cv.jpg" />
+                                            <img className="hide-img" alt="ImageName" src="#" />
                                             Mon CV
                                         </a>
                                     </div>
