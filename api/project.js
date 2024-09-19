@@ -28,6 +28,12 @@ const Projects = [
           author: 'Georges Gouchere - Evaluateur OpenClassRooms'
       },
       approach: `L'approche adoptée était de se concentrer sur l'expérience utilisateur mobile, en développant une interface intuitive et des animations fluides pour une navigation agréable.`,
+      competencies: [
+        { name: 'HTML', icon: 'html.svg' },
+        { name: 'CSS', icon: 'css.svg' },
+        { name: 'JavaScript', icon: 'js.svg' },
+        { name: 'SASS', icon: 'sass.svg' }
+    ],
       goals: [
           'Créer une interface utilisateur simplifiée.',
           'Développer une application rapide et performante.',
@@ -72,6 +78,12 @@ const Projects = [
           author: 'Leblond- Client The-Programmer'
       },
       approach: `L'approche adoptée était de développer une interface intuitive et flexible permettant aux administrateurs de serveurs de jeux de gérer facilement les données depuis leur téléphone portable, où qu'ils soient.`,
+            competencies: [
+        { name: 'FLUTTER', icon: 'flutter.svg' },
+        { name: 'DART', icon: 'dart.svg' },
+        { name: 'PHP', icon: 'php.svg' },
+        { name: 'STEAM', icon: 'steam.svg' }
+      ],
       goals: [
           'Développer une application mobile compatible Android et iOS.',
           'Créer un système de gestion dynamique et en temps réel des serveurs de jeux.',
@@ -117,6 +129,11 @@ const Projects = [
           author: 'Thomas - Client The-Programmer'
       },
       approach: `L'approche adoptée a été de simplifier au maximum la gestion et la personnalisation des notifications dans Arma 3, tout en assurant une conversion automatique des scripts existants pour une intégration facile.`,
+            competencies: [
+        { name: 'SQF', icon: 'sqf.svg' },
+        { name: 'C#', icon: 'csharp.svg' },
+        { name: 'PHOTOSHOP', icon: 'photoshop.svg' }
+      ],
       goals: [
           'Permettre la personnalisation avancée des notifications en jeu.',
           'Simplifier la conversion des scripts existants en un clic.',
@@ -161,6 +178,12 @@ const Projects = [
           author: 'Maxence - CEO The Programmer'
       },
       approach: `L'approche adoptée a été de développer une interface utilisateur simple mais puissante, permettant aux développeurs de gérer efficacement leurs projets et leurs clients, tout en garantissant une expérience utilisateur fluide.`,
+            competencies: [
+        { name: 'HTML', icon: 'html.svg' },
+        { name: 'CSS', icon: 'css.svg' },
+        { name: 'JavaScript', icon: 'js.svg' },
+        { name: 'PHP', icon: 'php.svg' }
+      ],
       goals: [
           'Développer un système de gestion de projets complet.',
           'Faciliter la gestion des clients et des paiements.',

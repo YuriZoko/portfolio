@@ -84,6 +84,22 @@ const ProjectSingle = ({ maxWidth, open, onClose, projectId }) => {
                                         </div>
 
                                         <div className="wpo-project-single-item list-widget">
+                                            <div className="wpo-project-single-title">
+                                                <h3>Compétences</h3>
+                                            </div>
+                                            <div className="competency-logos">
+                                                {project.competencies.map((competency, index) => (
+                                                    <img
+                                                        key={index}
+                                                        src={`images/icon/${competency.icon}`}
+                                                        alt={competency.name}
+                                                        className="competency-logo"
+                                                    />
+                                                ))}
+                                            </div>
+                                        </div>
+                                        
+                                        <div className="wpo-project-single-item list-widget">
                                             <div className="row">
                                                 <div className="col-lg-6">
                                                     <div className="wpo-project-single-title">

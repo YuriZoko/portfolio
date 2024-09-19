@@ -122,6 +122,17 @@
 
         }
 
+        .competency-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .competency-logo {
+            width: 80px;
+            height: auto;
+        }
+
         .list-widget {
             ul {
                 list-style: none;

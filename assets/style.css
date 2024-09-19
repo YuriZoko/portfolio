@@ -5825,6 +5825,16 @@ ul.smothscroll a:hover {
 .wpo-project-single-area .wpo-project-single-wrap .wpo-project-single-item .wpo-project-single-content-des-right ul li:first-child {
   padding-top: 0;
 }
+.wpo-project-single-area .wpo-project-single-wrap .competency-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.wpo-project-single-area .wpo-project-single-wrap .competency-logo {
+  width: 80px;
+  height: auto;
+}
 .wpo-project-single-area .wpo-project-single-wrap .list-widget ul {
   list-style: none;
 }
