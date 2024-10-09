@@ -197,7 +197,56 @@ const Projects = [
           'Amélioration de la gestion des paiements.'
       ],
       projectLink: 'https://custom.the-programmer.com/'
-   }
+   },
+   {
+    Id: '5',
+    pImg: 'images/project/newisland.webp',
+    title: 'NewIsland - Site de présentation du serveur RP Arma3 NewIsland',
+    subTitle: 'Développement Web',
+    description: `Création d'un site web pour présenter le serveur RP Arma3 NewIsland, avec des informations sur les règles, les factions, les véhicules, les armes et les événements.`,
+    projectDetails: {
+        location: 'Totes, France',
+        client: 'NewIsland',
+        consult: 'Alexandre',
+        projectType: 'Développement Web',
+        duration: '1 journée',
+        completion: 'Septembre 2024',
+        share: 'Développement Web, Arma3, Services'
+    },
+    strategies: {
+        description: 'L\'objectif principal était de créer un site web complet et informatif pour présenter le serveur RP Arma3 NewIsland, en mettant en avant les règles, les factions, les véhicules, les armes et les événements.',
+        points: [
+            'Création d\'une page d\'accueil attrayante avec des informations clés.',
+            'Présentation des règles du serveur et des factions disponibles.',
+            'Affichage des règles de monétisation',
+            'Insertion d\'une Foire aux Questions (FAQ) pour les nouveaux joueurs.',
+            'Affichage du nombre de joueur en ligne sur le serveur en temps réel.'
+        ]
+    },
+    quote: {
+        text: '“Le site a grandement amélioré notre visibilité et notre communication avec les joueurs. Les informations sont claires et faciles à trouver.”',
+        author: 'Alexandre'
+    },
+    approach: `L'approche adoptée a été de concevoir un site web clair et informatif, mettant en avant les éléments essentiels du serveur RP Arma3 NewIsland pour attirer de nouveaux joueurs et améliorer la communication avec la communauté existante.`,
+          competencies: [
+      { name: 'HTML', icon: 'html.svg' },
+      { name: 'CSS', icon: 'css.svg' },
+      { name: 'JavaScript', icon: 'js.svg' }
+    ],
+    goals: [
+        'Créer un site web informatif et attrayant pour le serveur RP Arma3 NewIsland.',
+        'Mettre en avant les règles, les factions, les véhicules, les armes et les événements.',
+        'Améliorer la communication avec les joueurs et attirer de nouveaux membres.',
+        'Assurer la compatibilité du site avec tous les appareils.'
+    ],
+    results: [
+        'Augmentation du nombre de joueurs sur le serveur.',
+        'Meilleure communication avec la communauté.',
+        'Informations claires et faciles à trouver pour les nouveaux joueurs.',
+        'Site web compatible avec tous les appareils.'
+    ],
+    projectLink: 'https://newisland.fr/'
+    }
 ];
 
 export default Projects;
